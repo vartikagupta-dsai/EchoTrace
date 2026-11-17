@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EchoTrace | Memory Map</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <h2>✦ EchoTrace</h2>
+        <span>Every place has a story.</span>
+    </header>
+
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <p class="eyebrow">YOUR PERSONAL MEMORY SPACE</p>
+
+            <h1>
+                Some moments deserve<br>
+                <span>to stay forever.</span>
+            </h1>
+
+            <p class="intro">
+                Save your stories, explore your memories
+                and revisit the places that matter.
+            </p>
+
+            <a href="#add-memory" class="main-btn">
+                + Create a memory
+            </a>
+
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <h2 id="memory-count">0</h2>
+                <p>Memories saved</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>∞</h2>
+                <p>Stories to discover</p>
+            </div>
+
+        </section>
+
+        <!-- Create Memory Form -->
+        <section id="add-memory" class="form-section">
+
+            <h2>Create a new memory ✨</h2>
+
+            <form id="memory-form">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Give your memory a title"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Where did it happen?"
+                    required
+                >
+
+                <label for="memory-photo">
+                    Upload your memory photo 📸
+                </label>
+
+                <input
+                    type="file"
+                    id="memory-photo"
+                    accept="image/*"
+                >
+
+                <textarea
+                    id="description"
+                    placeholder="Write your beautiful memory here..."
+                    required
+                ></textarea>
+
+                <label for="memory-date">
+                    When did it happen?
+                </label>
+
+                <input
+                    type="date"
+                    id="memory-date"
+                    required
+                >
+
+                <button type="submit" class="main-btn">
+                    Save Memory
+                </button>
+
+            </form>
+
+        </section>
+<!-- Interactive Memory Map -->
+<section class="map-section">
+
+    <h2>Explore Your Memory Map 🗺️</h2>
+
+    <p>Every location holds a beautiful story.</p>
+
+    <div id="memory-map"></div>
+
+</section>
+        <!-- Memory Collection -->
+        <section class="memories-section">
+
+            <h2>Your Memory Collection</h2>
+
+            <div id="memory-list" class="memory-grid">
+
+                <p id="empty-message">
+                    Your first memory is waiting to be created ♡
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with ♡ by EchoTrace</p>
+    </footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
